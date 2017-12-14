@@ -88,7 +88,7 @@ function initMap(){
               if (articleList.length > 0) {
                 for (var i=0; i<articleList.length; i++) {
                   var articleStr = articleList[i];
-                  var url = 'http://en.wikipedia.org/wiki/' + articleStr;
+                  var url = 'https://en.wikipedia.org/wiki/' + articleStr;
                   contentString = '<div>' + Mtitle + '<p>' + '</p>' + '<p>' +"The Location is :"+Mute+ '</p>' + '<a href=" ' + url + '">' + url + '</a>' + '</div>'
                   infowindow.setContent(contentString);
                 }
