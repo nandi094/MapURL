@@ -30,7 +30,7 @@
     },
 	{title:'Infosys',
     location: {lat: 12.8505, lng: 77.6655},
-	address:'Infosys, Gate 4, Building 12, Phase I, Electronic City, Hosur Road Electronics City Phase 1, Electronic City Bengaluru, Karnataka 560100 India',
+	address:'Infosys,Gate 4, Building 12, Phase I, Electronic City, Hosur Road Electronics City Phase 1, Electronic City Bengaluru, Karnataka 560100 India',
     wiki: 'https://en.wikipedia.org/wiki/Infosys',
     }
 	
