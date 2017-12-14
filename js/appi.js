@@ -24,7 +24,7 @@
     wiki: 'https://en.w/ikipedia.org/wiki/Vidhana_Soudha',
     },
     {title:'Basavanagudi Nandi Temple',
-    location: {lat: 12.9456, lng: 77.5713},
+    location: {lat: 12.941752, lng: 77.568268},
 	address:'Nandi Temple,Bull Temple Road, Basavanagudi, Bengaluru, Karnataka 560004',
     wiki: 'https://en.wikipedia.org/wiki/Dodda_Ganeshana_Gudi',
     },
