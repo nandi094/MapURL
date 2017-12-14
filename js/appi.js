@@ -5,26 +5,32 @@
   var locations = [
     {title:'ISKCON Temple Bangalore',
     location: {lat: 13.0104, lng: 77.5510},
+	address:'ISKCON Temple, Hare Krishna Hill, Chord Road, Rajaji Nagar, Bengaluru, Karnataka 560010',
     wiki: 'https://en.wikipedia.org/wiki/ISKCON_Temple_Bangalore',
     },
     {title:'Lal Bagh',
     location: {lat: 12.9507, lng:77.5848},
+	address:'Lal Bagh, Mavalli, Bengaluru, Karnataka 560004',
     wiki: 'https://en.wikipedia.org/wiki/Lal_Bagh',
     },
     {title:'M Chinnaswamy Stadium',
     location: {lat: 12.9788, lng: 77.5996},
+	address:'M Chinnaswamy Stadium, MG Road, Near Gandhi Park, Bengaluru, Karnataka 560001',
     wiki: 'https://en.wikipedia.org/wiki/M._Chinnaswamy_Stadium',
     },
     {title:'Vidhana Soudha',
     location: {lat: 12.9783, lng: 77.5895},
+	address:'Vidhana Soudha, Doctor Ambedkar Veedhi, Sampangi Rama Nagar, Bengaluru, Karnataka 560001',
     wiki: 'https://en.w/ikipedia.org/wiki/Vidhana_Soudha',
     },
     {title:'Basavanagudi Nandi Temple',
     location: {lat: 12.9456, lng: 77.5713},
+	address:'Nandi Temple,Bull Temple Road, Basavanagudi, Bengaluru, Karnataka 560004',
     wiki: 'https://en.wikipedia.org/wiki/Dodda_Ganeshana_Gudi',
     },
 	{title:'Infosys',
     location: {lat: 12.8505, lng: 77.6655},
+	address:'Infosys, Gate 4, Building 12, Phase I, Electronic City, Hosur Road, Bengaluru, Karnataka 560100',
     wiki: 'https://en.wikipedia.org/wiki/Infosys',
     }
 	
@@ -43,12 +49,14 @@ function initMap(){
   for (var i = 0; i < locations.length; i++) {
     var position =locations[i].location;
     var title = locations[i].title;
+	var address_loc = locations[i].address;
     //var wiki = locations[i].wiki;
   //creating markers
     var marker = new google.maps.Marker ({
       position : position,
       map:map,
       title: title,
+	  address_loc: address_loc,
       animation : google.maps.Animation.DROP
     });
 
@@ -66,6 +74,7 @@ function initMap(){
       //This sets the content ofthe info window
       var Mtitle = marker.title;
 	  var Mute = marker.position;
+	  var Madd = marker.address_loc;
 	  
           //Create contentString variable for infowindows
           var contentString;
@@ -89,10 +98,10 @@ function initMap(){
                 for (var i=0; i<articleList.length; i++) {
                   var articleStr = articleList[i];
                   var url = 'https://en.wikipedia.org/wiki/' + articleStr;
-                  contentString = '<div>' + Mtitle + '<p>' + '</p>' + '<p>' +"The Location is :"+Mute+ '</p>' + '<a href=" ' + url + '">' + url + '</a>' + '</div>'
+                  contentString = '<div>' + Mtitle + '<p>' + '</p>' + '<p>' +"The Address is : "+Madd+ '</p>' + '<a href=" ' + url + '">' + url + '</a>' + '</div>'
                   infowindow.setContent(contentString);
                 }
-                console.log(url);
+                console.log(wikiUrl);
               //If no article is found, populate infowindow with content string reflecting no articles were found
               } else {
                 contentString = '<div id="content">' + Mtitle + '<p>'  + '</p>' + '<p>' + 'No articles found on Wikipedia'+ '</p>' + '</div>'
@@ -138,7 +147,7 @@ var AppViewModel = function() {
         map.setCenter(locations.location);
         //this event not happening while i click list element
         google.maps.event.trigger(locations.locationObject, 'click');
-        // google.maps.event.trigger(loadData.details, 'click');
+        // google.maps.event.trigger(loadData.details, 'click')
         };
       self.query = ko.observable('');
      //for filter operations
