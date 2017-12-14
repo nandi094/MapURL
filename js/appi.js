@@ -74,7 +74,7 @@ function initMap(){
 
 
           //Wikipedia API request URL
-          var wikiUrl = "http://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=" + Mtitle + "&limit=1&redirects=return&format=json"
+          var wikiUrl = "https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=" + Mtitle + "&limit=1&redirects=return&format=json"
           var wikiRequestTimeout = setTimeout(function() {
              alert("failed to get wikipedia resources");
             }, 100000000);
