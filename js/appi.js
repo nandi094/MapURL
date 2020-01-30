@@ -98,7 +98,7 @@ function initMap(){
                 for (var i=0; i<articleList.length; i++) {
                   var articleStr = articleList[i];
                   var url = 'https://en.wikipedia.org/wiki/' + articleStr;
-                  contentString = '<div>' + Mtitle + '<p>' + '</p>' + '<p>' +"The Address is : "+Madd+ '</p>' + '<a href=" ' + url + '">' + url + '</a>' + '</div>'
+                  contentString = '<div>' + Mtitle + '<p>' + '</p>' + '<p>' +"The Address is : "+Madd+ '</p>' + '<a href=" ' + url + '" target="_blank">' + url + '</a>' + '</div>'
                   infowindow.setContent(contentString);
                 }
                 console.log(wikiUrl);
