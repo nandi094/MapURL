@@ -114,7 +114,7 @@ function initMap(){
                 console.log(wikiUrl);
               //If no article is found, populate infowindow with content string reflecting no articles were found
               } else {
-                contentString = '<div id="content">' + Mtitle + '<p>'  + '</p>' + '<p>' + 'No articles found on Wikipedia'+ '</p>' + '</div>'
+                contentString = '<div id="content">' + Mtitle + '<p>'  +"The Address is : "+Madd+ '</p>' + '<p>' + 'No articles found on Wikipedia'+ '</p>' + '</div>'
                 console.log(url);
                 infowindow.setContent(contentString);
               }
