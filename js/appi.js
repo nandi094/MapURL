@@ -33,7 +33,7 @@
 	address:'Nandi Temple,Bull Temple Road, Basavanagudi, Bengaluru, Karnataka 560004',
     wiki: 'https://en.wikipedia.org/wiki/Dodda_Ganeshana_Gudi',
     },
-   {title:'KPMG Global Services',
+   {title:'KPMG',
     location: {lat: 12.9207000, lng: 77.683844},
 	address:'Ecospace Business Park Rmz Eco World Bellandur, Floor 1 – 6, Campus 7, Devarabeesanahalli, Outer Ring Road, RMZ Ecoworld Rd, Bellandur, Bengaluru, Karnataka 560103',
     wiki: 'https://en.wikipedia.org/wiki/KPMG',
